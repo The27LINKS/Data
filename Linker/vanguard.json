@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "total_vanguard_users": 3,
-    "last_updated": "2026-04-07"
+    "total_vanguard_users": 8,
+    "last_updated": "2026-04-08"
   },
   "contributors": [
     {
@@ -40,6 +40,73 @@
       "socials": {
         "github": "https://github.com/the27links",
         "twitter": "https://x.com/the27links"
+      }
+    },
+    {
+      "id": "priya@the27links",
+      "name": "Priya Singh",
+      "badge": "Evangelist",
+      "role": "Community Lead",
+      "role_color": "f59e0b",
+      "contribution": "Grew the early adopter community and authored the primary Quickstart documentation for the developer portal.",
+      "avatar": "https://ui-avatars.com/api/?name=Priya+Singh&background=0f172a&color=f59e0b&size=150",
+      "socials": {
+        "github": "#",
+        "twitter": "#",
+        "linkedin": "#"
+      }
+    },
+    {
+      "id": "rahul@the27links",
+      "name": "Rahul Dev",
+      "badge": null,
+      "role": "Backend Vanguard",
+      "role_color": "8b5cf6",
+      "contribution": "Optimized the SQLite data buffer rotation scripts, reducing the monthly Database sync latency by 40%.",
+      "avatar": "https://ui-avatars.com/api/?name=Rahul+Dev&background=0f172a&color=8b5cf6&size=150",
+      "socials": {
+        "github": "#",
+        "website": "#"
+      }
+    },
+    {
+      "id": "anita@the27links",
+      "name": "Anita Desai",
+      "badge": "Bug Hunter",
+      "role": "QA Specialist",
+      "role_color": "ef4444",
+      "contribution": "Identified and documented 15+ edge cases in the Mobile App WebView bridge during the closed alpha phase.",
+      "avatar": "https://ui-avatars.com/api/?name=Anita+Desai&background=0f172a&color=ef4444&size=150",
+      "socials": {
+        "github": "#",
+        "linkedin": "#"
+      }
+    },
+    {
+      "id": "karan@the27links",
+      "name": "Karan Mehta",
+      "badge": null,
+      "role": "UI Engineer",
+      "role_color": "0ea5e9",
+      "contribution": "Implemented the dynamic JWT-based layout rendering and refined accessibility (a11y) standards across the dashboard.",
+      "avatar": "https://ui-avatars.com/api/?name=Karan+Mehta&background=0f172a&color=0ea5e9&size=150",
+      "socials": {
+        "github": "#",
+        "dribbble": "#",
+        "twitter": "#"
+      }
+    },
+    {
+      "id": "sneha@the27links",
+      "name": "Sneha Reddy",
+      "badge": null,
+      "role": "Infra Vanguard",
+      "role_color": "10b981",
+      "contribution": "Configured the automated Cloudflare Tunnel CI/CD deployment pipeline using secure GitHub Actions.",
+      "avatar": "https://ui-avatars.com/api/?name=Sneha+Reddy&background=0f172a&color=10b981&size=150",
+      "socials": {
+        "github": "#",
+        "linkedin": "#"
       }
     }
   ]
