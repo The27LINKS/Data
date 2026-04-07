@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "total_vanguard_users": 3,
+    "last_updated": "2026-04-07"
+  },
+  "contributors": [
+    {
+      "id": "robert@the27links",
+      "name": "Robert Storm",
+      "badge": "Founder",
+      "role": "Core Architect",
+      "contribution": "Architected the Triple-Database synchronization policy and developed the core Linker Authentication gateway.",
+      "avatar": "https://ui-avatars.com/api/?name=Robert+Storm&background=0f172a&color=38bdf8&size=150",
+      "socials": {
+        "github": "https://github.com/the27links",
+        "twitter": "https://x.com/the27links",
+        "website": "https://the27links.in"
+      }
+    },
+    {
+      "id": "aisha@the27links",
+      "name": "Aisha Sharma",
+      "badge": null,
+      "role": "Security Vanguard",
+      "role_color": "34d399",
+      "contribution": "Discovered and patched critical vulnerabilities in the JWT token refresh cycle during the beta testing phase.",
+      "avatar": "https://ui-avatars.com/api/?name=Aisha+Sharma&background=0f172a&color=34d399&size=150",
+      "socials": {
+        "github": "#",
+        "linkedin": "#"
+      }
+    }
+  ]
+}
