@@ -32,7 +32,7 @@
           {
       "id": "Avi@the27links",
       "name": "Avi Sharma",
-      "badge": nill,
+      "badge": null,
       "role": "Core Architect",
       "contribution": "Architected the Triple-Database synchronization policy and developed the core Linker Authentication gateway.",
       "avatar": "https://linker.the27links.in/static/profiles/c5fe246f8e164cfb9420326a0044cac1.jpeg",
