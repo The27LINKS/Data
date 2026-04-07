@@ -18,17 +18,29 @@
       }
     },
     {
-      "id": "aisha@the27links",
-      "name": "Aisha Sharma",
-      "badge": null,
+      "id": "Sumit@the27links",
+      "name": "Pt. Sumit Kumar",
+      "badge": "Cheif Editor",
       "role": "Security Vanguard",
       "role_color": "34d399",
-      "contribution": "Discovered and patched critical vulnerabilities in the JWT token refresh cycle during the beta testing phase.",
-      "avatar": "https://ui-avatars.com/api/?name=Aisha+Sharma&background=0f172a&color=34d399&size=150",
+      "contribution": "Frontend designing and configuring api routes and checking security features.",
+      "avatar": "https://avatars.githubusercontent.com/u/273386710?v=4",
       "socials": {
-        "github": "#",
-        "linkedin": "#"
+        "github": "https://github.com/Er-Sumit-Kumar",
+        "website": "https://the27links.in"
+      },
+          {
+      "id": "Avi@the27links",
+      "name": "Avi Sharma",
+      "badge": nill,
+      "role": "Core Architect",
+      "contribution": "Architected the Triple-Database synchronization policy and developed the core Linker Authentication gateway.",
+      "avatar": "https://linker.the27links.in/static/profiles/c5fe246f8e164cfb9420326a0044cac1.jpeg",
+      "socials": {
+        "github": "https://github.com/the27links",
+        "twitter": "https://x.com/the27links",
       }
+    },
     }
   ]
 }
