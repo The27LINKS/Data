@@ -20,7 +20,7 @@
     {
       "id": "Sumit@the27links",
       "name": "Pt. Sumit Kumar",
-      "badge": "Cheif Editor",
+      "badge": "Chief Editor",
       "role": "Security Vanguard",
       "role_color": "34d399",
       "contribution": "Frontend designing and configuring api routes and checking security features.",
@@ -28,8 +28,9 @@
       "socials": {
         "github": "https://github.com/Er-Sumit-Kumar",
         "website": "https://the27links.in"
-      },
-          {
+      }
+    },
+    {
       "id": "Avi@the27links",
       "name": "Avi Sharma",
       "badge": null,
@@ -38,9 +39,8 @@
       "avatar": "https://linker.the27links.in/static/profiles/c5fe246f8e164cfb9420326a0044cac1.jpeg",
       "socials": {
         "github": "https://github.com/the27links",
-        "twitter": "https://x.com/the27links",
+        "twitter": "https://x.com/the27links"
       }
-    }
     }
   ]
 }
