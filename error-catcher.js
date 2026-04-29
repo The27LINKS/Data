@@ -8,15 +8,13 @@
             left: 0; 
             width: 100vw; 
             height: 100vh;
-            /* Semi-transparent dark background */
             background: rgba(0, 0, 0, 0.5);
-            /* The magic property that blurs the website behind the overlay */
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 2147483647; /* Maximum possible z-index to stay on top */
+            z-index: 2147483647; 
             font-family: system-ui, -apple-system, sans-serif;
             opacity: 0;
             animation: fadeIn 0.3s forwards;
@@ -32,6 +30,7 @@
             text-align: center;
             transform: translateY(20px);
             animation: slideUp 0.3s forwards;
+            color: black; /* Ensure text is visible regardless of host site styles */
         }
 
         .global-error-popup h2 {
@@ -77,71 +76,69 @@
             to { transform: translateY(0); }
         }
     `;
-    document.head.appendChild(style);
+    
+    // Safely append styles
+    if (document.head) {
+        document.head.appendChild(style);
+    } else {
+        document.documentElement.appendChild(style);
+    }
 
     // 2. Function to build and display the UI
     function triggerErrorPopup(errorMessage, source, lineno) {
-        // Prevent multiple popups if multiple errors fire at once
+        // Prevent multiple popups
         if (document.querySelector('.global-error-overlay')) return;
 
-        // Create Overlay
         const overlay = document.createElement('div');
         overlay.className = 'global-error-overlay';
 
-        // Create Popup Box
         const popup = document.createElement('div');
         popup.className = 'global-error-popup';
 
-        // Create Title
         const title = document.createElement('h2');
         title.innerText = '⚠️ Application Error';
 
-        // Create Error Details
         const details = document.createElement('p');
-        const formattedSource = source ? `\n\nFile: ${source}\nLine: ${lineno}` : '';
+        const formattedSource = source ? `\n\nSource: ${source}\nLine: ${lineno}` : '';
         details.innerText = `${errorMessage}${formattedSource}`;
 
-        // Create Close Button
         const closeBtn = document.createElement('button');
         closeBtn.className = 'global-error-close';
         closeBtn.innerText = 'Dismiss';
         closeBtn.onclick = () => overlay.remove();
 
-        // Assemble the DOM elements
         popup.appendChild(title);
         popup.appendChild(details);
         popup.appendChild(closeBtn);
         overlay.appendChild(popup);
-        document.body.appendChild(overlay);
+
+        // BULLETPROOF INJECTION: Use body if it exists, otherwise use the HTML tag
+        const targetNode = document.body || document.documentElement;
+        targetNode.appendChild(overlay);
     }
 
-    // 3. Attach listeners to the Window object
-
-    // Catches standard synchronous runtime errors
+    // 3. Attach listeners
     window.onerror = function(message, source, lineno, colno, error) {
         triggerErrorPopup(message, source, lineno);
-        return false; // Returns false so the error still logs normally in the dev console
+        return false; 
     };
 
-    // Catches asynchronous errors (failed Promises)
     window.addEventListener('unhandledrejection', function(event) {
         triggerErrorPopup(
             event.reason ? event.reason.toString() : 'Unhandled Promise Rejection', 
             'Async Operation', 
-            'Unknown'
+            'N/A'
         );
     });
 
-    // Catches resource loading errors (broken images, blocked scripts) during the capture phase
     window.addEventListener('error', function(event) {
-        // Check if the error came from an HTML element (like <img>, <script>, or <link>)
         if (event.target && (event.target.src || event.target.href)) {
             triggerErrorPopup(
                 `Resource failed to load: ${event.target.src || event.target.href}`, 
-                event.target.tagName + ' Tag', 
+                (event.target.tagName || 'Unknown') + ' Tag', 
                 'N/A'
             );
         }
-    }, true); // The 'true' sets it to capture phase, which is required for network errors
+    }, true); 
 
 })();
