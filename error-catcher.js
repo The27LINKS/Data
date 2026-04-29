@@ -116,6 +116,7 @@
     }
 
     // 3. Attach listeners to the Window object
+
     // Catches standard synchronous runtime errors
     window.onerror = function(message, source, lineno, colno, error) {
         triggerErrorPopup(message, source, lineno);
@@ -130,5 +131,17 @@
             'Unknown'
         );
     });
+
+    // Catches resource loading errors (broken images, blocked scripts) during the capture phase
+    window.addEventListener('error', function(event) {
+        // Check if the error came from an HTML element (like <img>, <script>, or <link>)
+        if (event.target && (event.target.src || event.target.href)) {
+            triggerErrorPopup(
+                `Resource failed to load: ${event.target.src || event.target.href}`, 
+                event.target.tagName + ' Tag', 
+                'N/A'
+            );
+        }
+    }, true); // The 'true' sets it to capture phase, which is required for network errors
 
 })();
